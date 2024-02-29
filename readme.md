@@ -5,17 +5,17 @@ Modellizzo la struttura di una tabella per memorizzare tutti i dati riguardanti 
 
 Colonne|Tipo|Attributi
 ---|---|---
-id| bigint | PRIMARY_KEY AUTO_INCREMENT
-marca| VARCHAR | NOTNULL
-modello| VARCHAR | NOTNULL
-anno_immatricolazione | YEAR | NULL, DEFAULT('2023')
-n.telaio | VARCHAR | UNIQUE, NOTNULL
+id| BIGINT | PRIMARY_KEY, AUTO_INCREMENT
+marca| VARCHAR(20) | NOTNULL
+modello| VARCHAR(30) | NOTNULL
+anno_immatricolazione | DATE | NOTNULL, DEFAULT('2023')
+n.telaio | CHAR(17) | UNIQUE, NOTNULL
 alimentazione | CHAR | NOTNULL
 cambio | CHAR | NOTNULL, DEFAULT('Manuale')
 potenza | SMALLINT | NOTNULL, DEFAULT('1')
-chilometraggio | CHAR | NOTNULL 
+chilometraggio | MEDIUMINT | NOTNULL
 n.proprietari | TINYINT | NOTNULL, DEFAULT('1')
 n.porte | CHAR | NULL, DEFAULT('3/5')
-prezzo | CHAR | NOTNULL
+prezzo | FLOAT(9,2) | NULL
 paese | CHAR | NOTNULL, DEFAULT ('Italia')
 cap | CHAR | NOTNULL
